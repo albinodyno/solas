@@ -1,5 +1,4 @@
-//define pins//
-
+//define pins
 #define pin13 13
 
 int command = 6;
@@ -7,7 +6,7 @@ int command = 6;
 void setup() 
 {
   pinMode(pin13, OUTPUT);
-  digitalWrite(pin13, LOW);
+  digitalWrite(pin13, HIGH);
 
   Serial.begin(9600);
 }
@@ -26,11 +25,11 @@ void loop()
     //FLOODS
     case 0:
     {
-      digitalWrite(pin13, LOW);
+      digitalWrite(pin13, HIGH);
     }
     case 1:
     {
-      digitalWrite(pin13, HIGH);      
+      digitalWrite(pin13, LOW);    
     }
   }
 }
